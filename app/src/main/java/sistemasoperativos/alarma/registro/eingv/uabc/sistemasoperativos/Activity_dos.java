@@ -136,7 +136,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","23 septiembre de 2008");
-                
+                intent.putExtra("fd","");
 
                 break;
             case "Android 1.1 Banana Bread":
@@ -148,6 +148,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and1.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","9 de febrero de 2009");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 1.5 Cupcake":
@@ -157,6 +158,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and1.5");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","30 de abril de 2009");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 1.6 Donut":
@@ -164,6 +166,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and1.6");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","15 de septiembre de 2009");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 2.0/2.1 Eclair":
@@ -172,6 +175,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and2");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","26 de octubre de 2009");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 2.2.x Froyo":
@@ -179,6 +183,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and2.2");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","20 de mayo de 2010");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 2.3.x Gingerbread":
@@ -187,6 +192,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and2.3");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","6 de diciembre de 2010");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 3.x Honeycomb":
@@ -198,6 +204,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and3");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","22 de febrero de 2011");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 4.0.x Ice Cream Sandwich":
@@ -210,6 +217,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and4");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","19 de octubre de 2011");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 4.1/4.3 Jelly Bean":
@@ -226,6 +234,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and4.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","27 de junio de 2012");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 4.4 KitKat":
@@ -233,6 +242,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and4.4");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","31 de octubre de 2013");
+                intent.putExtra("fd","");
 
                 break;
             case "Android 5.0 Lollipop":
@@ -240,6 +250,7 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","and5");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","3 de noviembre de 2014");
+                intent.putExtra("fd","");
 
                 break;
             /**************Windows*******************/
@@ -248,66 +259,77 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","w1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows NT":
                 descri="";
                 intent.putExtra("ver","wNT");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 3.5":
                 descri="";
                 intent.putExtra("ver","w3.5");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 95":
                 descri="";
                 intent.putExtra("ver","w95");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 98":
                 descri="";
                 intent.putExtra("ver","w98");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 2000":
                 descri="";
                 intent.putExtra("ver","w20");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows XP":
                 descri="";
                 intent.putExtra("ver","wXP");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows vista":
                 descri="";
                 intent.putExtra("ver","wV");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 7":
                 descri="";
                 intent.putExtra("ver","w7");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 8":
                 descri="";
                 intent.putExtra("ver","w8");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows 8.1":
                 descri="";
                 intent.putExtra("ver","w8.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             /***************Windows Phone*************/
             case "Windows Phone 7":
@@ -315,24 +337,28 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","wp7");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows Phone 7.1":
                 descri="";
                 intent.putExtra("ver","wp7.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows Phone 7.5":
                 descri="";
                 intent.putExtra("ver","wp7.5");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Windows Phone 8":
                 descri="";
                 intent.putExtra("ver","wp8");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             /**********Ubuntu*********************/
             case "Ubuntu 4.10":
@@ -340,126 +366,147 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","u4.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 5.04":
                 descri="";
                 intent.putExtra("ver","u5.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 5.10":
                 descri="";
                 intent.putExtra("ver","u5.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 6.06 LTS":
                 descri="";
                 intent.putExtra("ver","u6.06");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 6.10":
                 descri="";
                 intent.putExtra("ver","u6.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 7.04":
                 descri="";
                 intent.putExtra("ver","u7.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 7.10":
                 descri="";
                 intent.putExtra("ver","u7.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 8.04 LTS":
                 descri="";
                 intent.putExtra("ver","u8.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 8.10":
                 descri="";
                 intent.putExtra("ver","u8.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 9.04":
                 descri="";
                 intent.putExtra("ver","u9.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 9.10":
                 descri="";
                 intent.putExtra("ver","9.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 10.04 LTS":
                 descri="";
                 intent.putExtra("ver","u10.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 10.10":
                 descri="";
                 intent.putExtra("ver","u10.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 11.04":
                 descri="";
                 intent.putExtra("ver","u11.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 11.10":
                 descri="";
                 intent.putExtra("ver","u11.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 12.04 LTS":
                 descri="";
                 intent.putExtra("ver","u12.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 12.10":
                 descri="";
                 intent.putExtra("ver","u12.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 13.04":
                 descri="";
                 intent.putExtra("ver","u13.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 13.10":
                 descri="";
                 intent.putExtra("ver","u13.1");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 14.04 LTS":
                 descri="";
                 intent.putExtra("ver","u14.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
             case "Ubuntu 14.10":
                 descri="";
                 intent.putExtra("ver","u14.10");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","");
+                intent.putExtra("fd","");
                 break;
         }
 

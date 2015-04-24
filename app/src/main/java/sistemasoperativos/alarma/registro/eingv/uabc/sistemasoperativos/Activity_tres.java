@@ -30,6 +30,7 @@ public class Activity_tres extends ActionBarActivity {
 
         des.setText(getIntent().getStringExtra("des").toString());
         fechC.setText(getIntent().getStringExtra("fi").toString());
+        fechD.setText(getIntent().getStringExtra("fd"));
         osv=getIntent().getStringExtra("ver");
 
         switch(osv){
