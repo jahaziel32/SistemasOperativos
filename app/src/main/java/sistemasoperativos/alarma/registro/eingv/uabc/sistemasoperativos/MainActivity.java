@@ -21,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] escri={"Linux","OS","Ubuntu","Windows"};
+        String[] escri={"OS","Ubuntu","Windows"};
         String[] mobile={"Android","BlackBerry OS","Firefox OS","iOS","Windows Phone"};
 
 
@@ -87,11 +87,6 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, Activity_dos.class);
 
         switch (opcion) {
-            case "Linux":
-                descripcion="";
-                intent.putExtra("OS", "Linux");
-                intent.putExtra("linux", descripcion);
-                break;
             case "Ubuntu":
                 descripcion="";
                 intent.putExtra("OS", "Ubuntu");

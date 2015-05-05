@@ -24,13 +24,12 @@ public class Activity_dos extends ActionBarActivity {
             "Android 3.x Honeycomb","Android 4.0.x Ice Cream Sandwich","Android 4.1/4.3 Jelly Bean",
             "Android 4.4 KitKat","Android 5.0 Lollipop"};
     String[] vWin={"Windows 1.0","Windows NT","Windows 3.5","Windows 95","Windows 98","Windows 2000",
-            "Windows XP","Windows vista","Windows 7","Windows 8","Windows 8.1"};
+            "Windows XP","Windows vista","Windows 7","Windows 8"};
     String[] vWP={"Windows Phone 7","Windows Phone 7.1","Windows Phone 7.5","Windows Phone 8"};
     String[] vUb={"Ubuntu 4.10","Ubuntu 5.04","Ubuntu 5.10","Ubuntu 6.06 LTS","Ubuntu 6.10",
             "Ubuntu 7.04","Ubuntu 7.10","Ubuntu 8.04 LTS","Ubuntu 8.10","Ubuntu 9.04","Ubuntu 9.10",
             "Ubuntu 10.04 LTS","Ubuntu 10.10","Ubuntu 11.04","Ubuntu 11.10","Ubuntu 12.04 LTS",
             "Ubuntu 12.10","Ubuntu 13.04","Ubuntu 13.10","Ubuntu 14.04 LTS","Ubuntu 14.10"};
-    String[] vLi={};
     String[] vios={};
     String[] vFi={};
     String[] vBB={};
@@ -51,23 +50,18 @@ public class Activity_dos extends ActionBarActivity {
 
 
         switch (so){
-            case "Linux":
-                versiones(vLi);
-                break;
             case "Windows":
                 versiones(vWin);
-                getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFBCE7FF"));
                 break;
             case "Ubuntu":
                 versiones(vUb);
-                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FF9C00D3"));
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#EADDBFFF"));
                 break;
             case "Android":
                 desc.setText(getIntent().getStringExtra("android"));
                 versiones(vAnd);
-                getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-                spinner.setBackgroundColor(Color.WHITE);
-
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFABFFB1"));
                 break;
             case "Firefox OS":
                 versiones(vFi);
@@ -542,61 +536,105 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 11.04":
-                descri="Ubuntu 11.04 (nombre clave Natty Narwhal - Narval Elegante). Esta versión marca el fin deUbuntu Netbook Edition, puesto que se ha decidido fusionarla con la edición de escritorio.[66]\n" +
-                        "Esta versión recibió varios cambios en su apariencia, partiendo por la implementación de la interfaz de usuario Unity que incluye un lanzador izquierdo, un tablero con acceso a aplicaciones y una barra superior con indicadores y menús.[67] Debido a Unity, no se utilizó GNOME Shell, ya que Unity es el shell creado por Canonical para Ubuntu, pero sí se emplearon todas las demás herramientas y aplicaciones de GNOME, como es habitual.[68] En esta versión, Unity funciona con Compiz como compositor de ventanas, siendo este último mucho más rápido que el anterior compositor Mutter, utilizado en la versión 10.10 Netbook Edition.[69]\n" +
-                        "Ubuntu 11.04 incluye tres sesiones de escritorio en la entrada de usuario de Ubuntu; la primera sesión es 'Ubuntu', utiliza Unity y es necesario tener instalados controladores para ambientes gráficos 3D. La segunda sesión es 'Ubuntu Clásico', utiliza el mismo entorno que se utilizaba en versiones anteriores de Ubuntu con GNOME Panel, y utiliza efectos de escritorio. La tercera sesión es 'Ubuntu Clásico (Sin efectos)', como la anterior sesión pero sin efectos de escritorio.";
+                descri="Ubuntu 11.04 (nombre clave Natty Narwhal - Narval Elegante). Esta versión marca el fin deUbuntu Netbook " +
+                        "Edition, puesto que se ha decidido fusionarla con la edición de escritorio.\n" +
+                        "Esta versión recibió varios cambios en su apariencia, partiendo por la implementación de la " +
+                        "interfaz de usuario Unity que incluye un lanzador izquierdo, un tablero con acceso a aplicaciones " +
+                        "y una barra superior con indicadores y menús. Debido a Unity, no se utilizó GNOME Shell, ya que " +
+                        "Unity es el shell creado por Canonical para Ubuntu, pero sí se emplearon todas las demás herramientas" +
+                        " y aplicaciones de GNOME, como es habitual. En esta versión, Unity funciona con Compiz como compositor" +
+                        " de ventanas, siendo este último mucho más rápido que el anterior compositor Mutter, utilizado en la" +
+                        " versión 10.10 Netbook Edition.\n" + "Ubuntu 11.04 incluye tres sesiones de escritorio en la " +
+                        "entrada de usuario de Ubuntu; la primera sesión es 'Ubuntu', utiliza Unity y es necesario tener " +
+                        "instalados controladores para ambientes gráficos 3D. La segunda sesión es 'Ubuntu Clásico', utiliza " +
+                        "el mismo entorno que se utilizaba en versiones anteriores de Ubuntu con GNOME Panel, y utiliza efectos" +
+                        " de escritorio. La tercera sesión es 'Ubuntu Clásico (Sin efectos)', como la anterior sesión pero sin " +
+                        "efectos de escritorio.";
                 intent.putExtra("ver","u11.04");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","28 de abril de 2011");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 11.10":
-                descri="";
+                descri="Ubuntu 11.10 (nombre clave Oneiric Ocelot - Ocelote Onírico).\n" +
+                        "Ubuntu 11.10 incluye el entorno Unity 2D, el cual se usa por defecto en equipos que no " +
+                        "puedan utilizar la interfaz Unity. Unity 2D no requiere de controladores de video, " +
+                        "pero debido a eso no utiliza efectos de escritorio generados por Compiz como si lo haceUnity." +
+                        " Los elementos de la interfaz Unity fueron portados a GTK 3 gracias a GNOME 3, debido a esto " +
+                        "llegaron cambios de diseño en Nautilus y el Centro de control. Se incorpora el nuevo motor de " +
+                        "temas Unico, el cual tiene como objetivo manejar los nuevos temas GTK+ 3, Unico reemplaza al " +
+                        "anterior motor Murrine que utilizaba GTK 2.";
                 intent.putExtra("ver","u11.1");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","13 de octubre de 2011");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 12.04 LTS":
-                descri="";
+                descri="Ubuntu 12.04 LTS (nombre clave Precise Pangolin - Pangolín Preciso).\n" +
+                        "Esta versión es la primera con 5 años de soporte extendido en el escritorio.\n" +
+                        "Se han hecho varios cambios en la interfaz de usuario. El acceso de Inicio del tablero " +
+                        "de Unity fue rediseñado, eliminando los 8 iconos grandes de acceso y fueron reemplazados" +
+                        " por aplicaciones y archivos de uso más reciente. El lanzador se encuentra siempre visible " +
+                        "y ya no se auto-oculta cuando hay una ventana sobre ella. Se incluyó un nuevo acceso de Video " +
+                        "en el tablero para buscar videos en línea y locales del computador.";
                 intent.putExtra("ver","u12.04");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
-                intent.putExtra("fd","");
+                intent.putExtra("fi","26 de abril de 2012");
+                intent.putExtra("fd","Aun con soporte");
                 break;
             case "Ubuntu 12.10":
-                descri="";
+                descri="Ubuntu 12.10 (nombre clave Quantal Quetzal - Quetzal Cuántico).\n" +
+                        "Nueva integración en el escritorio con Aplicaciones Web. Con esto el " +
+                        "navegador Firefox consulta al usuario si quiere integrar un sitio como " +
+                        "aplicación web, ello hace uso de notificaciones de escritorio, indicadores en" +
+                        " el lanzador, acceso al menú de mensajería, también administrar imágenes, " +
+                        "contactos, documentos en las secciones Fotos, Social, Archivos y carpetas, " +
+                        "además de búsqueda de opciones de HUD.";
                 intent.putExtra("ver","u12.1");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","18 de octubre de 2012");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 13.04":
-                descri="";
+                descri="Ubuntu 13.04 (nombre clave Raring Ringtail - Lemur Ansioso).\n" +
+                        "Nuevos iconos de aplicaciones llegaron para Nautilus, Centro de software de " +
+                        "Ubuntu, Actualización de software, el icono de Ubuntu y los iconos blancos de " +
+                        "acceso del tablero de aplicaciones. El tablero de aplicaciones ahora tiene las " +
+                        "mismas barras de desplazamiento que se utilizan en las demás aplicaciones. Se " +
+                        "rediseñaron las ventanas de apagado de sistema para tener consistencia visual " +
+                        "con el tablero de aplicaciones.\n";
                 intent.putExtra("ver","u13.04");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","25 de abril de 2013");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 13.10":
-                descri="";
+                descri="Ubuntu 13.10 (nombre clave Saucy Salamander - Salamandra Descarada).\n" +
+                        "Con esta versión llegó la nueva búsqueda inteligente al tablero, con múltiples " +
+                        "fuentes de información en línea de varios sitios, además cada fuente en línea se puede " +
+                        "deshabilitar o volver a habilitar. Nuevo reconocimiento de voz se integra a HUD 2.0, " +
+                        "gracias a herramientas de reconocimiento de voz como PocketSphinx, Julius y VoxForge.\n";
                 intent.putExtra("ver","u13.1");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","17 de octubre de 2013");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 14.04 LTS":
-                descri="";
+                descri="Ubuntu 14.04 LTS (nombre clave Trusty Tahr - Tauro Fiel), esta versión tiene muchas novedades, " +
+                        "como el historial de sesiones, recuperar el nombre de usuario en la barra de indicadores en " +
+                        "una opción de Cuentas de usuario como las versiones inferiores a 12.04, Menús en la barra de " +
+                        "título en una opción de apariencia, eliminación de Ubuntu One y One Music, nuevas opciones en " +
+                        "configuración del sistema, subir el volumen máximo al 100%, entre otros.";
                 intent.putExtra("ver","u14.04");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","17 de abril de 2014");
                 intent.putExtra("fd","");
                 break;
             case "Ubuntu 14.10":
-                descri="";
+                descri="Ubuntu 14.10 (nombre clave Utopic Unicorn - Unicornio Utópico)";
                 intent.putExtra("ver","u14.10");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","23 de octubre de 2014");
                 intent.putExtra("fd","");
                 break;
         }

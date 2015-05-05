@@ -73,26 +73,29 @@ public class Activity_tres extends ActionBarActivity {
                 break;
             /***************Windows**************/
             case "w1":
+                mos.setImageResource(R.drawable.win1_00);
                 break;
             case "wNT":
-                break;
             case "w3.5":
-                break;
             case "w95":
+                mos.setImageResource(R.drawable.win7);
                 break;
             case "w98":
+                mos.setImageResource(R.drawable.win98);
                 break;
             case "w20":
+                mos.setImageResource(R.drawable.win7);
                 break;
             case "wXP":
                 break;
             case "wV":
+                mos.setImageResource(R.drawable.winvista);
                 break;
             case "w7":
+                mos.setImageResource(R.drawable.win7);
                 break;
             case "w8":
-                break;
-            case "w8.1":
+                mos.setImageResource(R.drawable.win8);
                 break;
             /********Whindows Phone***********/
             case "wp7":
@@ -105,46 +108,27 @@ public class Activity_tres extends ActionBarActivity {
                 break;
             /*************Ubuntu***************/
             case "u4.1":
-                break;
             case "u5.04":
-                break;
             case "u5.1":
-                break;
             case "u6.06":
-                break;
             case "u6.1":
-                break;
             case "u7.04":
-                break;
             case "u7.1":
-                break;
             case "u8.04":
-                break;
             case "u8.1":
-                break;
             case "u9.04":
-                break;
             case "u9.1":
-                break;
             case "u10.04":
-                break;
             case "u10.1":
-                break;
             case "u11.04":
-                break;
             case "u11.1":
-                break;
             case "u12.04":
-                break;
             case "u12.1":
-                break;
             case "u13.04":
-                break;
             case "u13.1":
-                break;
             case "u14.04":
-                break;
             case "u14.1":
+                mos.setImageResource(R.drawable.ubuntu1);
                 break;
 
 

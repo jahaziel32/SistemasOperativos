@@ -32,7 +32,7 @@
                android:layout_gravity="center_horizontal"
                android:gravity="center|fill"
                android:editable="false"
-               android:scrollbars="horizontal"/>
+               android:scrollbars="vertical"/>
 
            <TextView
                android:layout_width="wrap_content"
