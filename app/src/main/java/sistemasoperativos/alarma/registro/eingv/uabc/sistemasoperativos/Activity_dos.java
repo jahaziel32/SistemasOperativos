@@ -30,10 +30,12 @@ public class Activity_dos extends ActionBarActivity {
             "Ubuntu 7.04","Ubuntu 7.10","Ubuntu 8.04 LTS","Ubuntu 8.10","Ubuntu 9.04","Ubuntu 9.10",
             "Ubuntu 10.04 LTS","Ubuntu 10.10","Ubuntu 11.04","Ubuntu 11.10","Ubuntu 12.04 LTS",
             "Ubuntu 12.10","Ubuntu 13.04","Ubuntu 13.10","Ubuntu 14.04 LTS","Ubuntu 14.10"};
-    String[] vios={};
+    String[] vios={"iOS 4","iOS 5","iOS 6","iOS 7","iOS 8"};
     String[] vFi={};
-    String[] vBB={};
-    String[] vOS={};
+    String[] vBB={"BlackBerry 4.6","BlackBerry 6","BlackBerry 7.1","Blackberry 10"};
+    String[] vOS={"Versión 10.0(Cheetah)","Versión 10.1(Puma)","Versión 10.3(Panther)","Versión 10.4(Tiger)",
+            "Versión 10.5(Leopard)","Versión 10.6(Snow Leopard)","Versión 10.7(Lion)","Versión 10.8(Mountain Lion)",
+            "Versión 10.9(Mavericks)","Versión 10.10(Yosemite)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +53,12 @@ public class Activity_dos extends ActionBarActivity {
 
         switch (so){
             case "Windows":
+                desc.setText(getIntent().getStringExtra("windows"));
                 versiones(vWin);
                 getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFBCE7FF"));
                 break;
             case "Ubuntu":
+                desc.setText(getIntent().getStringExtra("ubuntu"));
                 versiones(vUb);
                 getWindow().getDecorView().setBackgroundColor(Color.parseColor("#EADDBFFF"));
                 break;
@@ -63,22 +67,21 @@ public class Activity_dos extends ActionBarActivity {
                 versiones(vAnd);
                 getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFABFFB1"));
                 break;
-            case "Firefox OS":
-                versiones(vFi);
-                break;
             case "OS":
+                desc.setText(getIntent().getStringExtra("oss"));
                 versiones(vOS);
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#B1989898"));
                 break;
             case "iOS":
+                desc.setText(getIntent().getStringExtra("ios"));
                 versiones(vios);
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFDDEDFF"));
                 break;
-            case "WP":
 
-                desc.setText(getIntent().getStringExtra("WPhone"));
-                versiones(vWP);
-                break;
             case "BlackBerry OS":
+                desc.setText(getIntent().getStringExtra("bbos"));
                 versiones(vBB);
+                getWindow().getDecorView().setBackgroundColor(Color.parseColor("#FFFFF9A9"));
                 break;
         }
 
@@ -255,70 +258,97 @@ public class Activity_dos extends ActionBarActivity {
                 descri="";
                 intent.putExtra("ver","w1");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","noviembre de 1985");
                 intent.putExtra("fd","");
                 break;
             case "Windows NT":
-                descri="";
+                descri="Microsoft lanzó Windows NT basado en un nuevo kernel. NT era considerado como el" +
+                        " sistema operativo profesional y fue la primera versión de Windows en utilizar la Multitarea apropiativa. ";
                 intent.putExtra("ver","wNT");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","julio de 1993");
                 intent.putExtra("fd","");
                 break;
             case "Windows 3.5":
                 descri="";
                 intent.putExtra("ver","w3.5");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","1 de marzo de 1992");
                 intent.putExtra("fd","");
                 break;
             case "Windows 95":
-                descri="";
+                descri="Microsoft lanzó Windows 95, una versión nueva para los consumidores, que incluía grandes cambios " +
+                        "que en la interfaz de usuario y la utilización de la multitarea apropiativa. Windows 95 fue " +
+                        "diseñado para sustituir no solo a Windows 3.1, sino también a Windows para Workgroups y a MS-DOS." +
+                        " También fue el primer sistema operativo Windows que utilizó las capacidades Plug and Play. ";
                 intent.putExtra("ver","w95");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","24 de agosto de 1995");
                 intent.putExtra("fd","");
                 break;
             case "Windows 98":
-                descri="";
+                descri="Microsoft Windows 98. Sustancialmente fue criticado por su lentitud y por su falta " +
+                        "de fiabilidad en comparación con Windows 95, pero muchos de sus problemas básicos " +
+                        "fueron posteriormente rectificados con el lanzamiento de Windows 98 Second Edition en 1999. ";
                 intent.putExtra("ver","w98");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","25 de junio de 1998");
                 intent.putExtra("fd","");
                 break;
             case "Windows 2000":
-                descri="";
+                descri="Microsoft lanzó Windows 2000 en febrero de 2000. La versión de consumidor tras Windows " +
+                        "98 fue Windows Me (Windows Millennium Edition). Lanzado en septiembre de 2000, " +
+                        "Windows Me implementaba una serie de nuevas tecnologías para Microsoft: en particular " +
+                        "fue el «Universal Plug and Play». Durante el 2004 parte del código fuente de Windows 2000" +
+                        " se filtró en internet, esto era malo para Microsoft porque el mismo núcleo utilizado en " +
+                        "Windows 2000 se utilizó en Windows XP.";
                 intent.putExtra("ver","w20");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","Febrero de 2000");
                 intent.putExtra("fd","");
                 break;
             case "Windows XP":
-                descri="";
+                descri="Microsoft lanzó Windows XP, una versión que se construyó en el kernel de Windows NT que " +
+                        "también conserva la usabilidad orientada al consumidor de Windows 95 y sus sucesores." +
+                        " En dos ediciones distintas, «Home» y «Professional», el primero carece por mucho de " +
+                        "la seguridad y características de red de la edición Professional. ";
                 intent.putExtra("ver","wXP");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","Octubre de 2001");
                 intent.putExtra("fd","");
                 break;
             case "Windows vista":
-                descri="";
+                descri="Microsoft lanzó Windows Vista. Contiene una serie de características nuevas, desde un " +
+                        "shell rediseñado y la interfaz de usuario da importantes cambios técnicos, con especial " +
+                        "atención a las características de seguridad. Está disponible en varias ediciones diferentes " +
+                        "y ha sido objeto de muy severas críticas debido a su patente inestabilidad, sobredemanda de " +
+                        "recursos de hardware, alto costo, y muy alta incompatibilidad con sus predecesores, hecho que no ocurría con éstos.";
                 intent.putExtra("ver","wV");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","30 de enero de 2007");
                 intent.putExtra("fd","");
                 break;
             case "Windows 7":
-                descri="";
+                descri="Microsoft lanzó Windows 7. A diferencia de su predecesor, Windows Vista, que introdujo a " +
+                        "un gran número de nuevas características, Windows 7 pretendía ser una actualización incremental" +
+                        ", enfocada a la línea de Windows, con el objetivo de ser compatible con aplicaciones y hardware que" +
+                        " Windows Vista no era compatible. Windows 7 tiene soporte multi-touch, un Windows shell rediseñado " +
+                        "con una nueva barra de tareas, conocido como Superbar, un sistema red llamado HomeGroup, y mejoras" +
+                        " en el rendimiento sobre todo en velocidad y en menor consumo de recursos.";
                 intent.putExtra("ver","w7");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","22 de octubre de 2009");
                 intent.putExtra("fd","");
                 break;
             case "Windows 8":
-                descri="";
+                descri="Microsoft lanzó Windows 8. Por primera vez desde Windows 95, el botón Inicio ya no " +
+                        "está disponible en la barra de tareas, aunque la pantalla de inicio está aún activa " +
+                        "haciendo clic en la esquina inferior izquierda de la pantalla y presionando la tecla " +
+                        "Inicio en el teclado. Presenta un Explorador de Windows rediseñado, con la famosa interfaz" +
+                        " ribbon de Microsoft Office. ";
                 intent.putExtra("ver","w8");
                 intent.putExtra("des",descri);
-                intent.putExtra("fi","");
+                intent.putExtra("fi","29 de octubre de 2012,");
                 intent.putExtra("fd","");
                 break;
             case "Windows 8.1":
@@ -635,6 +665,233 @@ public class Activity_dos extends ActionBarActivity {
                 intent.putExtra("ver","u14.10");
                 intent.putExtra("des",descri);
                 intent.putExtra("fi","23 de octubre de 2014");
+                intent.putExtra("fd","");
+                break;
+            case "iOS 4":
+                descri="El iOS 4 quedó disponible al público para el iPhone y el iPod touch. El iPhone 3G, " +
+                        "junto con el iPod Touch (2.ª generación) tienen funciones limitadas. Esta es la " +
+                        "primera versión del iOS que deja de dar soporte a los dispositivos más antiguos, " +
+                        "en este caso la primera generación de iPhone y iPod Touch. También es la primera " +
+                        "versión que deja de cobrar al iPod Touch para actualizarse.";
+                intent.putExtra("ver","ios4");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","21 de junio de 2010");
+                intent.putExtra("fd","");
+                break;
+            case "iOS 5":
+                descri="Este también es la segunda versión iOS que no permite actualizarse en los dispositivos antiguos," +
+                        " en este caso: el iPhone 3G y el iPod touch 2G. Fue lanzado para iPhone 3GS, iPhone 4, iPhone 4s," +
+                        " iPod touch 3G, iPod touch 4G, iPad, iPad 2 y iPad 3 el 12 de octubre de 2011.";
+                intent.putExtra("ver","ios5");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","6 de junio de 2011");
+                intent.putExtra("fd","");
+                break;
+            case "iOS 6":
+                descri="También, es la tercera versión de iOS que no permite actualizarse en dispositivos antiguos, ahora en el" +
+                        " iPad (1.ª generación) y iPod Touch (3.ª generación). Fue lanzada para el iPhone 3GS, iPhone 4, iPhone 4s, " +
+                        "iPhone 5, iPod Touch (4.ª y 5.ª generación), iPad (2.ª, 3.ª y 4.ª generación) y ipad mini el 19 de septiembre de 2012";
+                intent.putExtra("ver","ios6");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","12 de junio de 2012");
+                intent.putExtra("fd","");
+                break;
+            case "iOS 7":
+                descri="iOS 7. Es la cuarta versión de iOS que no permite actualizarse en dispositivos antiguos, ahora en el " +
+                        "iPhone 3GS y iPod Touch (4.ª generación). Fue lanzada para el iPhone 4, iPhone 4s, iPhone 5, iPhone 5c, " +
+                        "iPhone 5s, iPod Touch (5.ª generación), iPad (2.ª, 3.ª, 4.ª y 5.ª generación), iPad Mini y iPad Mini con " +
+                        "Pantalla Retina el 17 de septiembre de 2013.";
+                intent.putExtra("ver","ios7");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","10 de junio de 2013");
+                intent.putExtra("fd","");
+                break;
+            case "iOS 8":
+                descri="iOS 8. Es la quinta versión de iOS que no permite actualizarse en dispositivos antiguos, ahora en el iPhone 4." +
+                        " Será lanzada para el iPhone 4s, iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, iPhone 6 Plus, iPod Touch (5.ª generación)" +
+                        ", iPad (2.ª, 3.ª, 4.ª, 5.ª y 6.ª generación), iPad mini (1.ª, 2.ª y 3.ª generación).";
+                intent.putExtra("ver","ios8");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","2 de junio de 2014");
+                intent.putExtra("fd","");
+                break;
+            /****************BlackBerry OS *****************/
+            case "BlackBerry 4.6":
+                descri="BlackBerry 4.6 es un sistema desarrollado por Research In Motion, las novedades las apĺicaciones se organizaron " +
+                        "en carpetas en el menú de aplicaciones, interfaz nuevo, Multimedia se ha rediseñado completamente.";
+                intent.putExtra("ver","bb4");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","");
+                intent.putExtra("fd","");
+                break;
+            case "BlackBerry 6":
+                descri="Blackberry 6 es un sistema desarrollado por Research In Motion la cual fue presentado en el WES 2010 junto " +
+                        "con un video promocional donde se muestra algunas novedades. RIM apuesta que su BlackBerry 6 estará enfocado" +
+                        " en el mercado corporativo y no-corporativo. La mejor experiencia de este sistema se encontrara en los equipos " +
+                        "touchscreen (Pantalla Táctil), aunque RIM aseguro que en los equipos que cuenten con un TouchPad o TrackPad" +
+                        " podrán ejecutarlo ya que ejerce casi la misma función. Así mismo todavía RIM no ha aclarado cuales son los " +
+                        "equipos que se podrán actualizar a esta versión aunque hay muchos rumores al respecto.";
+                intent.putExtra("ver","bb6");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","");
+                intent.putExtra("fd","");
+                break;
+            case "BlackBerry 7.1":
+                descri="Blackberry 7.1 es la última versión estable hasta el momento, esta nueva versión es muy parecida a la versión 7.0, " +
+                        "pero con una renovación de los iconos y de la resolución de la pantalla del teléfono inteligente, también tiene la función de trabajar como un Router inálambrico para distribuir redes Wi-Fi por el entorno de el teléfono inteligente, también tiene características que hacen más fácil el uso del teléfono inteligente. También incluye una versión completa del software de edición de documentos Documents To Go, puede usarse sin la necesidad de comprar alguna clave como en los sistemas pasados, que era requerida para realizar la edición de archivos.";
+                intent.putExtra("ver","bb7");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","");
+                intent.putExtra("fd","");
+                break;
+            case "Blackberry 10":
+                descri="BlackBerry 10 es el más reciente sistema operativo móvil propietario, desarrollado por BlackBerry para" +
+                        " su línea de teléfono inteligentes BlackBerry. Está basado en QNX el cual fue adquirido por RIM en" +
+                        " abril de 2010. La plataforma se llamaba originalmente BBX pero se cambió cuando a RIM se le bloqueó " +
+                        "el uso de la marca comercial BBX después de la acción legal de BASIS International, quien también lo " +
+                        "usa para su software. El CEO de RIM, Thorsten Heins, ha dicho que la compañía está considerando licenciar " +
+                        "BlackBerry 10 a otros OEMs.";
+                intent.putExtra("ver","bb10");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","");
+                intent.putExtra("fd","");
+                break;
+            /*******************MAC OS*************************/
+            case "Versión 10.0(Cheetah)":
+                descri="Apple liberó el Mac OS X v10.0 (de nombre en código Cheetah). La versión inicial era lenta, estaba " +
+                        "incompleta y tenía muy pocas aplicaciones disponibles al momento de su lanzamiento, casi todas de " +
+                        "desarrolladores independientes. Mientras que muchos críticos dijeron que el sistema operativo no " +
+                        "estaba listo para el público, reconocieron la importancia del lanzamiento inicial como una base " +
+                        "sobre la cual se puede progresar. La mera liberación del Mac OS X fue recibido por la comunidad " +
+                        "Macintosh como un gran acontecimiento. Después de corregir algunos errores de software, los kernel" +
+                        " panics se hicieron menos frecuentes.";
+                intent.putExtra("ver","os10");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","24 de marzo de 2001");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.1(Puma)":
+                descri="Apple lanzó esta nueva versión que incrementaba el rendimiento del sistema a la vez que " +
+                        "incorporaba algunas nuevas características tales como la reproducción de DVD. Dada la pésima " +
+                        "reputación de la versión 10.0, Apple lanzó la 10.1 en forma de un CD de actualización gratuito" +
+                        " para sus usuarios,74 además de los 129$ que costaba para los usuarios que seguían utilizando Mac OS 9." +
+                        " Esto ocasionó algunos quebraderos de cabeza a Apple cuando descubrió que los CD de actualización podían" +
+                        " ser utilizados también para hacer instalaciones completas en sistemas con Mac OS 9 con tan sólo eliminar " +
+                        "un determinado archivo.";
+                intent.putExtra("ver","os10.1");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","25 de septiembre de 2001");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.3(Panther)":
+                descri="Además de tener un rendimiento mucho mayor, incorporó la mayor actualización en la interfaz de usuario," +
+                        " y tantas o más mejoras que Jaguar el año anterior. Por otra parte, en esta versión dejaron de " +
+                        "soportarse algunos modelos antiguos G3.\n" + "Las nuevas mejoras de Panther incluyen:79 Finder " +
+                        "actualizado (que incorpora una interfaz metálica y búsqueda rápida), Exposé (una nueva forma de " +
+                        "manipular ventanas), cambio rápido de usuarios (permite tener sesiones con diferentes usuarios " +
+                        "abiertas al mismo tiempo y pasar de una a otra rápidamente), iChat AV (que añade soporte para " +
+                        "videoconferencia a iChat), renderización mejorada de PDF, soporte integrado de fax, interoperabilidad " +
+                        "mejorada con Microsoft Windows, FileVault (sistema de cifrado en tiempo real) e incremento de " +
+                        "velocidad en todo el sistema con un mayor soporte para los G5.";
+                intent.putExtra("ver","os10.3");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","24 de octubre de 2003");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.4(Tiger)":
+                descri="Mac OS X v10.4 \"Tiger\" . Contiene más de 150 nuevas mejoras, pero al igual que con el lanzamiento " +
+                        "de Panther, algunas máquinas antiguas dejaron de ser soportadas; en particular, cualquier equipo Apple " +
+                        "que no cuente con conexión FireWire no está ya soportado en Tiger. Como curiosidad cabe comentar que " +
+                        "Apple dispone a partir de Tiger, de una versión \"paralela\" compilada para procesadores Intel, si bien," +
+                        " teóricamente, sólo podrá instalarse bajo ciertas restricciones de hardware y en procesadores con soporte" +
+                        " SSE3. Esta versión apareció oficialmente el día 10 de enero de 2006 con los primeros equipos \"Mac Intel\":" +
+                        " El iMac Core Duo (ex iMac G5), Mac mini Core Solo y Core Duo (ex Mac mini G4) además de los nuevos" +
+                        " portátiles denominados MacBook y MacBook Pro, ambos equipados con procesadores Intel Core Duo. " +
+                        "También han existido versiones para G4 de este sistema operativo, incluida al menos en los últimos " +
+                        "PowerBook G4 a la venta.";
+                intent.putExtra("ver","os10.4");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","29 de abril de 2005");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.5(Leopard)":
+                descri="Fue llamado por Apple como «la mayor actualización del Mac OS X». Trajo consigo más de 300 nuevas " +
+                        "funciones. Leopard soporta tanto procesadores PowerPC como Intel; el soporte para procesadores G3 " +
+                        "fue abandonado y el procesador G4 requiere una velocidad mínima de 867 MHz, y 512 MB de RAM para " +
+                        "permitir la instalación. El DVD de instalación funciona con todas las arquitecturas soportadas " +
+                        "(incluyendo maquinas de 64 bits). Las nuevas funciones incluyen una nueva apariencia, un Finder " +
+                        "actualizado, Time Machine (software para realizar copias de seguridad), Spaces, Boot Camp preinstalado," +
+                        " soporte completo para aplicaciones de 64 bits, nuevas funciones en Mail e iChat, y nuevas " +
+                        "características de seguridad. Leopard es un sistema UNIX certificado para la plataforma Intel. " +
+                        "Es además el primer sistema operativo basado en BSD en recibir la certificación UNIX 03.85 " +
+                        "Leopard abandonó el soporte para el Entorno Classic y las aplicaciones del mismo. Fue la " +
+                        "última versión del Mac OS X con soporte para la arquitectura PowerPC.";
+                intent.putExtra("ver","os10.5");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","26 de octubre de 2007");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.6(Snow Leopard)":
+                descri="En lugar de incluir grandes cambios en la apariencia y funcionalidades como ocurrió en las " +
+                        "versiones anteriores de Mac OS X, Snow Leopard se enfocó en cambios internos, como lo son: " +
+                        "incrementar el rendimiento, la eficiencia y la estabilidad del sistema operativo. Para la" +
+                        " mayoría de usuarios, los cambios más notables son: la cantidad de espacio que ocupa una " +
+                        "instalación limpia, un Finder reescrito en Cocoa, copias de seguridad más rápidas en Time" +
+                        " Machine, a una versión más completa de la aplicación Vista Previa, al igual que mayor velocidad " +
+                        "en el navegador de internet Safari.";
+                intent.putExtra("ver","os10.6");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","28 de agosto de 2009");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.7(Lion)":
+                descri="Apple mostró un Sneak Peek del próximo sistema operativo Mac OS X 10.7 con nombre código «Lion». " +
+                        "Dentro de las primeras características se encuentran Launchpad que es un gestor de aplicaciones estilo " +
+                        "iOS; y Mission Control que se podría decir es la integración de Dashboard, Exposé, Spaces y ventanas de " +
+                        "Aplicaciones a pantalla completa. El 24 de febrero del 2011 fue entregada una beta de Mac os 10.7 'Lion' " +
+                        "a los desarrolladores, develando nuevas características como Airdrop, Resume, Auto Save, Versions y Mail 5." +
+                        " El 6 de junio del 2011 en la Keynote de la WWDC se anunció que OS X 10.7 será puesto a la venta únicamente " +
+                        "en descarga digital por la Mac App Store en Julio del 2011. A partir del 20 de julio Lion fue puesto a la venta " +
+                        "en la Mac App Store por 23.95 euros, 29.99 dólares al cambio, y se desveló que estaría disponible para descarga " +
+                        "desde la App Store y a partir del 20 de agosto estaría disponible para su venta en formato de pendrive.";
+                intent.putExtra("ver","os10.7");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","20 de octubre de 2010");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.8(Mountain Lion)":
+                descri="Apple lanzó la Developer Preview de Mac OS X 10.8 Mountain Lion, una versión del sistema operativo " +
+                        "en la que se incluyen muchas aplicaciones nativas de iOS, como Recordatorios, Notas o Mensajes. " +
+                        "Incluye también un centro de notificaciones cercano al de iOS. Mac OS X Mountain Lion salió a la" +
+                        " venta en España el 25 de julio de 2012. Con esta nueva versión, Apple pretende potenciar el uso " +
+                        "de la nube, con el ya usado iCloud, gracias a la integración con la suite ofimática, iWork. Otra " +
+                        "de las grandes novedades es Game Center, una plataforma de juego que pretende ser la primera en " +
+                        "aunar los progresos y logros de las consolas portátiles con los sistemas de escritorio.";
+                intent.putExtra("ver","os10.8");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","16 de febrero de 2012");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.9(Mavericks)":
+                descri="Apple lanzó la Actualización Mac OS X 10.9 Mavericks, una nueva versión que integra las aplicaciones de " +
+                        "iOS como Recordatorios, Notas, Mensajes, iBook y notificaciones instantáneas pero con mucha más personalización." +
+                        " La nueva versión se puede actualizar sin ningún costo desde el mismo día de su presentación. Entre otras " +
+                        "novedades anunciadas de OS X Mavericks está la opción de usar una HDTV como segundo monitor por medio de " +
+                        "Apple TV y el aumento de la duración de la batería para los usuarios de MacBook Air de 11\" y 13\", con mayor" +
+                        " ahorro de energía para iMac. ";
+                intent.putExtra("ver","os10.9");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi","22 de octubre de 2013");
+                intent.putExtra("fd","");
+                break;
+            case "Versión 10.10(Yosemite)":
+                descri=" Apple presentó en la \"WWDC 2014\" Mac OS X 10.10 Yosemite, una nueva versión del sistema " +
+                        "operativo que presenta un rediseño en su interfaz y mejoras en el Finder, Safari, Mail, Centro " +
+                        "de Notificaciones, etc. La versión Beta se encontrará disponible únicamente para el primer " +
+                        "millón de usuarios que se suscriban en el programa Beta de Apple";
+                intent.putExtra("ver","os10.10");
+                intent.putExtra("des",descri);
+                intent.putExtra("fi"," 2 de junio de 2014");
                 intent.putExtra("fd","");
                 break;
         }

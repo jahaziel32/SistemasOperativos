@@ -78,15 +78,16 @@ public class Activity_tres extends ActionBarActivity {
             case "wNT":
             case "w3.5":
             case "w95":
-                mos.setImageResource(R.drawable.win7);
+                mos.setImageResource(R.drawable.windows2000);
                 break;
             case "w98":
                 mos.setImageResource(R.drawable.win98);
                 break;
             case "w20":
-                mos.setImageResource(R.drawable.win7);
+                mos.setImageResource(R.drawable.windows2000);
                 break;
             case "wXP":
+                mos.setImageResource(R.drawable.winxp);
                 break;
             case "wV":
                 mos.setImageResource(R.drawable.winvista);
@@ -97,15 +98,7 @@ public class Activity_tres extends ActionBarActivity {
             case "w8":
                 mos.setImageResource(R.drawable.win8);
                 break;
-            /********Whindows Phone***********/
-            case "wp7":
-                break;
-            case "wp7.1":
-                break;
-            case "wp7.5":
-                break;
-            case "wp8":
-                break;
+
             /*************Ubuntu***************/
             case "u4.1":
             case "u5.04":
@@ -129,6 +122,33 @@ public class Activity_tres extends ActionBarActivity {
             case "u14.04":
             case "u14.1":
                 mos.setImageResource(R.drawable.ubuntu1);
+                break;
+            /***************MAC OS **************/
+            case "os10.1":
+            case "os10.3":
+            case "os10.4":
+            case "os10.5":
+            case "os10.6":
+            case "os10.7":
+            case "os10.8":
+            case "os10.9":
+            case "os10.10":
+                mos.setImageResource(R.drawable.macos);
+                break;
+            /**********IOS******************/
+            case "ios4":
+            case "ios5":
+            case "ios6":
+            case "ios7":
+            case "ios8":
+                mos.setImageResource(R.drawable.ioslogo);
+                break;
+
+            case "bb4":
+            case "bb6":
+            case "bb7":
+            case "bb10":
+                mos.setImageResource(R.drawable.blackberrylogo);
                 break;
 
 

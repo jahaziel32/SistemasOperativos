@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         String[] escri={"OS","Ubuntu","Windows"};
-        String[] mobile={"Android","BlackBerry OS","Firefox OS","iOS","Windows Phone"};
+        String[] mobile={"Android","BlackBerry OS","iOS"};
 
 
         spinner = (Spinner) findViewById(R.id.spinnerOp);
@@ -88,7 +88,10 @@ public class MainActivity extends ActionBarActivity {
 
         switch (opcion) {
             case "Ubuntu":
-                descripcion="";
+                descripcion="Ubuntu es un sistema operativo basado en GNU/Linux y que se distribuye " +
+                        "como software libre , el cual incluye su propio entorno de escritorio denominado " +
+                        "Unity. Su nombre proviene de la ética homónima, en la que se habla de la existencia " +
+                        "de uno mismo como cooperación de los demás.";
                 intent.putExtra("OS", "Ubuntu");
                 intent.putExtra("ubuntu", descripcion);
                 break;
@@ -105,7 +108,13 @@ public class MainActivity extends ActionBarActivity {
                 intent.putExtra("windows", descripcion);
                 break;
             case "OS":
-                descripcion="";
+                descripcion="OS X, antes llamado Mac OS X, es un entorno operativo basado en Unix, desarrollado, " +
+                        "comercializado y vendido por Apple Inc. Ha sido incluido en su gama de computadoras Macintosh " +
+                        "desde el año de 2002. OS X es el sucesor del Mac OS 9 (la versión final del Mac OS Classic), el" +
+                        " sistema operativo de Apple desde 1984. Está basado en BSD, y se construyó sobre las tecnologías " +
+                        "desarrolladas en NeXT entre la segunda mitad de los 80's y finales de 1996, cuando Apple adquirió " +
+                        "esta compañía. Técnicamente, no es un sistema operativo, sino que incluye uno (Darwin, cuyo núcleo es XNU)." +
+                        " Desde la versión Mac OS X 10.5 Leopard para procesadores Intel, el sistema tiene la certificación UNIX 03.";
                 intent.putExtra("OS", "OS");
                 intent.putExtra("oss", descripcion);
                 break;
@@ -121,23 +130,26 @@ public class MainActivity extends ActionBarActivity {
                 intent.putExtra("OS", "Android");
                 intent.putExtra("android", descripcion);
                 break;
-            case "Firefox OS":
-                descripcion="";
-                intent.putExtra("OS", "Firefox OS");
-                intent.putExtra("firefox", descripcion);
-                break;
+
             case "iOS":
-                descripcion = "";
+                descripcion = "iOS es un sistema operativo móvil de la multinacional Apple Inc. " +
+                        "Originalmente desarrollado para el iPhone (iPhone OS), después se ha usado en " +
+                        "dispositivos como el iPod touch y el iPad. No permite la instalación de iOS en " +
+                        "hardware de terceros. Tenía el 26% de cuota de mercado de sistemas operativos móviles" +
+                        " vendidos en el último cuatrimestre de 2010, detrás de Google Android y Nokia.";
                 intent.putExtra("OS", "iOS");
                 intent.putExtra("ios", descripcion);
                 break;
-            case "Windows Phone":
-                descripcion = "";
-                intent.putExtra("OS", "WP");
-                intent.putExtra("WPhone", descripcion);
-                break;
+
             case "BlackBerry OS":
-                descripcion="";
+                descripcion="El BlackBerry OS es un sistema operativo móvil de código cerrado desarrollado " +
+                        "por BlackBerry, antigua Research In Motion (RIM); para los dispositivos BlackBerry. " +
+                        "El sistema permite multitarea y tiene soporte para diferentes métodos de entrada adoptados " +
+                        "por RIM para su uso en computadoras de mano, particularmente la trackwheel, trackball, touchpad " +
+                        "y pantallas táctiles. Su desarrollo se remonta la aparición de los primeros handheld en 1999." +
+                        " Estos dispositivos permiten el acceso a correo electrónico, navegación web y sincronización " +
+                        "con programas como Microsoft Exchange o Lotus Notes aparte de poder hacer las funciones usuales" +
+                        " de un teléfono móvil.";
                 intent.putExtra("OS","BlackBerry OS");
                 intent.putExtra("bbos",descripcion);
                 break;
